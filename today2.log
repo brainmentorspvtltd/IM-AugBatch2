@@ -1,0 +1,71 @@
+content_script.js:24 initializing Content Script message listener
+add([1,2],["1","2"],()=>1,"1",2,"hello");
+two.js:17 Sum2  3
+two.js:22 parse Int  1
+two.js:24 Sum is  4
+two.js:17 Sum2  3
+two.js:22 parse Int  1
+two.js:24 Sum is  8
+two.js:22 parse Int  1
+two.js:24 Sum is  9
+two.js:22 parse Int  1
+two.js:24 Sum is  10
+two.js:22 parse Int  2
+two.js:24 Sum is  12
+two.js:22 parse Int  NaN
+two.js:24 Sum is  12
+12
+var d = [[1,2]];
+undefined
+d[0];
+(2) [1, 2]
+parseInt(d);
+1
+function add(){
+//console.log("I am Add ",arguments.length, typeof arguments, arguments instanceof Array);
+var sum = 0;
+//var sum2 = 0;
+var sum2 = 0;
+for(let i = 0 ; i<arguments.length; i++){
+sum2=0;
+if(arguments[i] instanceof Array){
+
+for(let j = 0; j<arguments[i].length; j++){
+if(typeof arguments[i][j]==="function"){
+arguments[i][j] = arguments[i][j]();
+}
+sum2+=isNaN(parseInt(arguments[i][j]))?0:parseInt(arguments[i][j]);
+
+}
+console.log("Sum2 ",sum2);
+arguments[i] = sum2;
+}
+if(typeof arguments[i]==="function"){
+arguments[i] = arguments[i]();
+}
+sum+=isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]);
+console.log("Sum is ",sum);
+}
+return sum;
+}
+undefined
+add([1,2],["1","2"],()=>1,"1",2,"hello");
+VM808:17 Sum2  3
+VM808:24 Sum is  3
+VM808:17 Sum2  3
+VM808:24 Sum is  6
+VM808:24 Sum is  7
+VM808:24 Sum is  8
+VM808:24 Sum is  10
+VM808:24 Sum is  10
+10
+function test2(...a){
+console.log("A is ",a);
+}
+undefined
+test2();
+VM946:2 A is  []
+undefined
+test2(1,2,3,4);
+VM946:2 A is  (4) [1, 2, 3, 4]
+undefined
