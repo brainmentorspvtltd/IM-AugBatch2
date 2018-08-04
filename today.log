@@ -1,0 +1,179 @@
+const salaryOperations = {
+  salary: 0,
+  takeSalary(salary) {
+    this.salary = salary;
+  },
+  hra() {
+    return this.salary * 0.3;
+  },
+  da() {
+    return this.salary * 0.2;
+  },
+  ta() {
+    return this.salary * 0.1;
+  },
+  pf() {
+    return this.salary * 0.05;
+  },
+
+  gs() {
+    return this.salary + this.hra() + this.da() + this.ta() - this.pf();
+  },
+  tax() {
+    return this.gs() * 0.1;
+  },
+  ns() {
+    return this.gs() - this.tax();
+  }
+};
+
+undefined
+for(let key in salaryOperations){
+console.log("Key is ",key);
+}
+VM134:2 Key is  salary
+VM134:2 Key is  takeSalary
+VM134:2 Key is  hra
+VM134:2 Key is  da
+VM134:2 Key is  ta
+VM134:2 Key is  pf
+VM134:2 Key is  gs
+VM134:2 Key is  tax
+VM134:2 Key is  ns
+undefined
+for(let key in salaryOperations){
+console.log("Key is ",key, typeof key);
+}
+VM163:2 Key is  salary string
+VM163:2 Key is  takeSalary string
+VM163:2 Key is  hra string
+VM163:2 Key is  da string
+VM163:2 Key is  ta string
+VM163:2 Key is  pf string
+VM163:2 Key is  gs string
+VM163:2 Key is  tax string
+VM163:2 Key is  ns string
+undefined
+salaryOperations."hra"();
+VM262:1 Uncaught SyntaxError: Unexpected string
+salaryOperations["hra"]();
+0
+salaryOperations.salary=9000;
+9000
+for(let key in salaryOperations){
+console.log("Key is ",key, typeof key, " Value ",sala  );
+}
+VM414:2 Uncaught ReferenceError: sala is not defined
+    at <anonymous>:2:50
+(anonymous) @ VM414:2
+for(let key in salaryOperations){
+console.log("Key is ",key, typeof key, " Value ",salaryOperations[key]()  );
+}
+VM478:2 Uncaught TypeError: salaryOperations[key] is not a function
+    at <anonymous>:2:71
+(anonymous) @ VM478:2
+for(let key in salaryOperations){
+if(typeof salaryOperations[key]=="function"){
+if(key=="takeSalary"){
+continue;
+}
+console.log("Key is ",key, typeof key, " Value ",salaryOperations[key]()  );
+}
+}
+VM591:6 Key is  hra string  Value  2700
+VM591:6 Key is  da string  Value  1800
+VM591:6 Key is  ta string  Value  900
+VM591:6 Key is  pf string  Value  450
+VM591:6 Key is  gs string  Value  13950
+VM591:6 Key is  tax string  Value  1395
+VM591:6 Key is  ns string  Value  12555
+undefined
+function giveMePromise(){
+var pr =new Promise((resolve,reject)=>{
+setTimeout(() => {
+                for (let i = 1; i <= 100000; i++) {
+                    for (let j = 1; j <= 100000; j++) {
+
+                    }
+                }
+resolve("Heavy Task Done ");
+},7000);
+return pr;
+}
+VM5575:12 Uncaught SyntaxError: missing ) after argument list
+function giveMePromise(){
+var pr =new Promise((resolve,reject)=>{
+setTimeout(() => {
+                for (let i = 1; i <= 100000; i++) {
+                    for (let j = 1; j <= 100000; j++) {
+
+                    }
+                }
+resolve("Heavy Task Done ");
+},7000);
+
+});
+return pr;
+}
+undefined
+var x= giveMePromise();
+for(let i = 1;i<=10;i++){
+console.log("Time Pass ",i);
+}
+x.then(data=>console.log(data)).catch(err=>console.log(err));
+VM6004:3 Time Pass  1
+VM6004:3 Time Pass  2
+VM6004:3 Time Pass  3
+VM6004:3 Time Pass  4
+VM6004:3 Time Pass  5
+VM6004:3 Time Pass  6
+VM6004:3 Time Pass  7
+VM6004:3 Time Pass  8
+VM6004:3 Time Pass  9
+VM6004:3 Time Pass  10
+Promise {<pending>}
+VM6004:5 Heavy Task Done 
+function async computeCube(num){
+var pr = new Promise((resolve,reject)=>{
+	setTimeout(()=>{
+	resolve(num**3);    
+}
+},4000);
+});
+return pr;
+}
+VM6611:1 Uncaught SyntaxError: Unexpected identifier
+function async computeCube(num){
+var pr = new Promise((resolve,reject)=>{
+	setTimeout(()=>{
+	resolve(num**3);    
+},4000);
+});
+return pr;
+}
+VM6629:1 Uncaught SyntaxError: Unexpected identifier
+async function  computeCube(num){
+var pr = new Promise((resolve,reject)=>{
+	setTimeout(()=>{
+	resolve(num**3);    
+},4000);
+});
+return pr;
+}
+undefined
+async function  computeSquare(num){
+var pr = new Promise((resolve,reject)=>{
+	setTimeout(()=>{
+	resolve(num**2);    
+},5000);
+});
+return pr;
+}
+undefined
+async function  total(){
+return await computeCube(3) + await computeSquare(2);
+}
+undefined
+total().then(data=>console.log("Total is ",data)).catch(err=>console.log("Catch is ",err));
+Promise {<pending>}
+VM6936:1 Total is  31

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        const counter = (function() {
+            var count = 0;
+            return function() {
+                return count++;
+            }
+        })();
+
+        function light() {
+            document.querySelector("#result").innerText = counter();
+        }
+
+        function heavy() {
+            var pr = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    for (let i = 1; i <= 100000; i++) {
+                        for (let j = 1; j <= 100000; j++) {
+
+                        }
+                    }
+                    console.log("Heavy task is going to return soon");
+                    //return "Heavy Task is Done...";
+                    resolve("Heavy Task is Done...");
+                }, 7000);
+            });
+
+            return pr;
+
+        }
+
+        // function heavy(callBack) {
+
+        //     setTimeout(() => {
+        //         for (let i = 1; i <= 100000; i++) {
+        //             for (let j = 1; j <= 100000; j++) {
+
+        //             }
+        //         }
+        //         console.log("Heavy task is going to return soon");
+        //         //return "Heavy Task is Done...";
+        //         callBack(null,"Heavy Task is Done...");
+        //     }, 7000);
+
+        // }
+
+        function giveMeOutput(err, t) {
+            if (t) {
+                document.querySelector("#msg").innerText = t;
+            } else {
+                console.log("Error is ", err);
+            }
+        }
+
+        function iWillPrintIt() {
+            console.log("Before Call");
+            //try {
+            // document.querySelector("#msg").innerText = heavy(giveMeOutput);
+            var promise = heavy();
+            for (let i = 1; i <= 10; i++) {
+                console.log(" Time Pass ", i);
+            }
+            promise.then(data => console.log("Data is :::::: ", data)).catch(err => console.log("Error is ", err));
+            console.log("DONE>>>>>>>>>");
+
+            /*} catch (e) {
+
+            }*/
+            console.log("After Call");
+            console.log("function is going to end...");
+        }
+    </script>
+</head>
+
+<body>
+    <p id="result"></p>
+    <button onclick="light()">Light</button>
+    <button onclick="iWillPrintIt()">Heavy</button>
+    <p id="msg"></p>
+</body>
+
+</html>

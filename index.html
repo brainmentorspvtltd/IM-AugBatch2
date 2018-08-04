@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Salary Calc</title>
+    <script src="js/model.js"></script>
+    <script src="js/controller.js"></script>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td><label for="">Basic Salary</label></td>
+            <td><input id="basicsalary" type="text" placeholder="Type Basic Salary Here"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button id="compute">Compute</button></td>
+        </tr>
+    </table>
+    <fieldset>
+        <legend>Salary Details</legend>
+        <p>HRA :: <span id="hra"></span></p>
+        <p>DA :: <span id="da"></span></p>
+        <p>TA :: <span id="ta"></span></p>
+        <p>PF :: <span id="pf"></span></p>
+        <p>GS :: <span id="gs"></span></p>
+        <p>Tax :: <span id="tax"></span></p>
+        <p>NS :: <span id="ns"></span></p>
+    </fieldset>
+
+</body>
+
+</html>
