@@ -1,0 +1,87 @@
+function* captcha(){
+yield "AA13234";
+yield "QA15644";
+yield "132DD34";
+yield "PPJJQ34";
+yield "99ZZBBG";
+yield "NNCCDDE";
+}
+undefined
+var x= captcha();
+undefined
+x;
+captcha {<suspended>}
+x.next().value;
+"AA13234"
+x.next().value;
+"QA15644"
+x.next().value;
+"132DD34"
+x.next().value;
+"PPJJQ34"
+x.next().value;
+"99ZZBBG"
+x.next().value;
+"NNCCDDE"
+x.next().value;
+undefined
+function* autoGenerator(){
+var counter = 1;
+while(true){
+yield counter;
+counter++;
+}
+}
+undefined
+var y = autoGenerator();
+undefined
+y.next().value;
+1
+y.next().value;
+2
+y.next().value;
+3
+y.next().value;
+4
+y.next().value;
+5
+y.next().value;
+6
+arr = [10,20,30,40,50,60];
+(6) [10, 20, 30, 40, 50, 60]
+arr.splice(1,1);
+[20]
+arr.splice(1,2);
+(2) [30, 40]
+arr;
+(3) [10, 50, 60]
+arr;
+(3) [10, 50, 60]
+arr = [10,20,30,40,50,60];
+(6) [10, 20, 30, 40, 50, 60]
+arr = [10,20,30,40,50,60,20,30,20];
+(9) [10, 20, 30, 40, 50, 60, 20, 30, 20]
+arr.filter(currentElement =>currentElement==40);
+[40]
+arr.filter(currentElement =>currentElement==20);
+(3) [20, 20, 20]
+arr.filter(currentElement =>currentElement==20000);
+[]
+arr.find(currentElement =>currentElement==40);
+40
+arr.findIndex(currentElement =>currentElement==40);
+3
+arr;
+(9) [10, 20, 30, 40, 50, 60, 20, 30, 20]
+arr.sort((a,b)=>a-b);
+(9) [10, 20, 20, 20, 30, 30, 40, 50, 60]
+arr.sort((a,b)=>b-a);
+(9) [60, 50, 40, 30, 30, 20, 20, 20, 10]
+arr.sort();
+(9) [10, 20, 20, 20, 30, 30, 40, 50, 60]
+"amit".localeCompare("amit");
+0
+"amit".localeCompare("anil");
+-1
+"anil".localeCompare("amit");
+1
