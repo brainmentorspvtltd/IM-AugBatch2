@@ -1,0 +1,32 @@
+async function doubleTheValue(num){
+var pr = new Promise((resolve,reject)=>{
+setTimeout(()=>{
+	resolve(num*num);    
+},4000);
+})	
+return pr;
+}
+undefined
+async function sum(){
+return await doubleTheValue(3) + await doubleTheValue(2) ;
+}
+undefined
+async function doubleTheValue(num){
+console.log("Double The Value ",num);
+var pr = new Promise((resolve,reject)=>{
+setTimeout(()=>{
+	resolve(num*num);    
+},4000);
+})	
+return pr;
+}
+undefined
+sum().then(data=>{
+console.log("Data is ",data);
+}).catch(err=>{
+console.log("Error is ",err);
+});
+VM414:2 Double The Value  3
+Promise {<pending>}
+VM414:2 Double The Value  2
+VM526:2 Data is  13

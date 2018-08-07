@@ -1,0 +1,30 @@
+{
+    "items": [{
+        "id": "1",
+        "name": "hgdjkghjkGHDKJ",
+        "desc": "GDHJGHDFK",
+        "price": "50",
+        "color": "#000000",
+        "date": "2018-08-22",
+        "url": "GDGF",
+        "markForDelete": false
+    }, {
+        "id": "2",
+        "name": "hgdjkghjkGHDKJ",
+        "desc": "GDHJGHDFK",
+        "price": "50",
+        "color": "#000000",
+        "date": "2018-08-22",
+        "url": "GDGF",
+        "markForDelete": false
+    }, {
+        "id": "3",
+        "name": "hgdjkghjkGHDKJ",
+        "desc": "GDHJGHDFK",
+        "price": "50",
+        "color": "#000000",
+        "date": "2018-08-22",
+        "url": "GDGF",
+        "markForDelete": false
+    }]
+}
