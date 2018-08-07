@@ -1,0 +1,11 @@
+/* p - selectors
+{} - expression
+font-size - property
+12px - value */
+
+p {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* base size = 16px = 1em */

@@ -1,0 +1,32 @@
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#parent {
+    background-color: lightcyan;
+}
+.col {
+    width: 30%;
+}
+
+.col-1 {
+    /* background-color: lightcoral; */
+    float: left;
+}
+.col-2 {
+    /* background-color: lightgreen; */
+    float: left;
+    /* float: right; */
+}
+
+.clear {
+    clear: both;
+}
+
+.div_1 {
+    /* float: left; */
+    border: 5px solid #000;
+    /* clear: both; */
+}
