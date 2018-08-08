@@ -1,9 +1,96 @@
+body {
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* overflow: hidden; */
+}
+* {
+    box-sizing: border-box;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+h1 {
+    margin: 0px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.row {
+    display: flex;
+}
+.col {
+    width: 50%;
+}
+
+table {
+    width: 100%;
+    border: none;
+    overflow-x: scroll;
+}
+.itemTable tr td {
+    padding: 10px;
+}
+.itemTable tr:nth-child(odd) {
+    background-color: lightgray;
+}
+.itemTable tr:nth-child(even) {
+    background-color: lightblue;
+}
+
+#header {
+    text-align: center;
+    background-color: #2874F0;
+    padding: 15px 0px;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 80%;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+input {
+    height: 35px;
+}
+
+button {
+    font-size: 20px;
+    display: inline-block;
+    min-width: 180px;
+    margin-bottom: 10px;
+    height: 40px;
+    background-color: #2874F0;
+    border: none;
+    color: #fff;
+    border-radius: 2px;
+}
+
 .size {
-    width: 50px;
-    height: 50px;
+    /* width: 72px; */
+    /* height: 72px; */
     cursor: pointer;
 }
 
-.mark {
-    background-color: lightcoral;
+.red {
+    background-color: red;
+}
+.col-2 {
+    overflow: hidden;
+}
+#itemtable {
+    overflow: hidden;
+}
+#itemtable img {
+    width: 15%;
+}
+#itemtable tr {
+    animation: anim_1 1s linear;
+}
+@keyframes anim_1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
