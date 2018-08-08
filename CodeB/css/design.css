@@ -19,9 +19,32 @@ body {
     display: block;
 }
 
+header {
+    text-align: center;
+    background-color: lightblue;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+h2 {
+    margin: 0px;
+}
+
+/* @media(max-width:1200px) {
+    header {
+         background-color: lightcyan;
+    }
+} */
+
+@media(min-width:1200px) {
+    header {
+         background-color: lightcyan;
+    }
+}
+
 .row {
     display: flex;
 }
+
 
 .col {
     background-color: #eee;
@@ -30,8 +53,18 @@ body {
     padding: 15px;
 }
 
+@media(max-width: 992px) {
+    .row {
+        display: block;
+    }
+    .col {
+        width: 100%;
+    }
+}
+
 table {
     width: 100%;
+    overflow: hidden;
 }
 
 input,textarea {
@@ -57,4 +90,23 @@ button {
 
 .mark {
     background-color: lightcoral;
+}
+
+#itemlist tr {
+    animation: anim_1 1s linear;
+}
+#itemlist tr:nth-child(odd) {
+    background-color: lightsalmon;
+}
+#itemlist tr:nth-child(even) {
+    background-color: lightsteelblue;
+}
+
+@keyframes anim_1 {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
