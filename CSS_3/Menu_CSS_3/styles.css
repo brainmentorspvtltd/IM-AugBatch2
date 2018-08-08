@@ -1,0 +1,58 @@
+#main-nav input[value='toggle-menu'] {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    height: 15px;
+    width: 30px;
+    opacity: 0;
+    cursor: pointer;
+}
+.menu-btn {
+    position: absolute;
+    top: 70px;
+    left: 50px;
+    background-color: transparent;
+    border: none;
+    pointer-events: none;
+}
+
+.line {
+    display: block;
+    width: 25px;
+    border: 2px solid red;
+    margin-bottom: 3px;
+    transition: 1s;
+}
+
+#main-nav ul {
+    background-color: lightgray;
+    list-style: none;
+    width: 20%;
+    margin: 50px 0px;
+    padding: 0px;
+    transform: translate(-120%);
+    transition: 1s;
+}
+#main-nav ul li a{
+    display: block;
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    /* background-color: #fff; */
+    border-bottom: 1px solid #eee;
+}
+
+#main-nav input[value='toggle-menu']:checked ~ ul{
+    transform: translate(0%);
+}
+
+#main-nav input[value='toggle-menu']:checked ~ .menu-btn .line:nth-child(2){
+    opacity: 0;
+}
+#main-nav input[value='toggle-menu']:checked ~ .menu-btn .line:first-child{
+    transform: rotate(45deg);
+}
+#main-nav input[value='toggle-menu']:checked ~ .menu-btn .line:last-child{
+    transform: rotate(-45deg);
+    margin-top: -13px;
+}
