@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #image {
+            text-align: center;
+            border: 2px solid red;
+            width: 300px;
+            margin: 0 auto;
+            padding: 10px;
+            perspective: 600px;
+            overflow: hidden;
+        }
+        img {
+            width: 300px;
+            height: 350px;
+            transition: 1s;
+        }
+        #image:hover img {
+            transform: scale(6,6);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="image">
+        <img src="../../CSS_2/dhoni.jpg" alt="">
+    </div>
+    
+</body>
+</html>

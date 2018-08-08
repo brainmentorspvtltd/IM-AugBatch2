@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #image {
+            text-align: center;
+            border: 2px solid red;
+            width: 300px;
+            margin: 0 auto;
+            padding: 10px;
+            perspective: 600px;
+        }
+        img {
+            width: 300px;
+            height: 350px;
+            transition: 1s;
+            transform-origin: left;
+        }
+        #image:hover img {
+            /* transform: rotateX(180deg); */
+            transform: rotateY(-180deg);
+            /* transform: rotateZ(3600deg); */
+            /* transform: rotate3d(1,1,1,360deg); */
+            /* transform: translate(200px,0px) rotateY(360deg); */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Transform Rotate</h1>
+
+    <div id="image">
+        <img src="../../CSS_2/dhoni.jpg" alt="">
+    </div>
+    
+</body>
+</html>
